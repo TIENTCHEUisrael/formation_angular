@@ -58,4 +58,10 @@ export class HotelListComponent{
       imageUrl:'assets/img/hotel-room.jpg'
     }
   ]
+
+  public showBadge:boolean=false;
+
+  public toggleIsNewBadge():void{
+    this.showBadge=!this.showBadge;
+  }
 }
