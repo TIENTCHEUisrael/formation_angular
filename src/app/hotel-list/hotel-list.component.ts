@@ -11,6 +11,7 @@ export class HotelListComponent implements OnInit{
   ngOnInit(): void {
     console.log('Mon niveau fonctionne');
     this.filteredHotels=this.hotels
+    this.hotelFilter='';
   }
 
   public title='List hotels';
@@ -81,5 +82,18 @@ export class HotelListComponent implements OnInit{
 
   public set hotelFilter(filter:string){
     this._hotelFilter=filter;
+
+    this.filteredHotels=this.hotelFilter ? this.filterHotel(this.hotelFilter):this.hotels;
+  }
+
+  /*Fonction pour filtrer*/
+  private filterHotel(crictere:string):Ihotel[]{
+    crictere=crictere.toLocaleLowerCase();
+
+    const res=this.hotels.filter(
+      (hotel:Ihotel)=>hotel.hotelName.toLocaleLowerCase().indexOf(crictere)!==-1
+    );
+
+    return res;
   }
 }

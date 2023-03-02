@@ -22,7 +22,7 @@
 </div>
 <div class="container">
   <div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4" *ngFor="let hotel of hotels">
+    <div class="col mb-4" *ngFor="let hotel of filteredHotels">
       <div class="card">
         <img src="{{ hotel.imageUrl }}" [title]="hotel.hotelName | uppercase" class="card-img-top" [alt]="hotel.hotelName"/>
         <div class="card-body">
