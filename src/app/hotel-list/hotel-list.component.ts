@@ -1,10 +1,18 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { Ihotel } from "./hotel";
 
 @Component({
   selector:'app-hotel-list',
-  templateUrl:'./hotel-list.component.html'
+  templateUrl:'./hotel-list.component.html',
+  styleUrls:['./hotel-list.component.css']
 })
-export class HotelListComponent{
+export class HotelListComponent implements OnInit{
+
+  ngOnInit(): void {
+    console.log('Mon niveau fonctionne');
+    this.filteredHotels=this.hotels
+  }
+
   public title='List hotels';
 
   public hotels:any[]=[
@@ -60,9 +68,18 @@ export class HotelListComponent{
   ]
 
   public showBadge:boolean=false;
-  public hotelFilter="mot";
+  public _hotelFilter="mot";
+  public filteredHotels:Ihotel[]=[];
 
   public toggleIsNewBadge():void{
     this.showBadge=!this.showBadge;
+  }
+
+  public get hotelFilter():string{
+    return this._hotelFilter;
+  }
+
+  public set hotelFilter(filter:string){
+    this._hotelFilter=filter;
   }
 }
