@@ -3,7 +3,8 @@ export interface Ihotel{
   hotelName:string;
   description:string;
   price:number;
-  imageUrl:string
+  imageUrl:string,
+  rating:number
 }
 
 
@@ -13,7 +14,8 @@ export class Hotel implements Ihotel{
     public hotelName:string,
     public description:string,
     public price:number,
-    public imageUrl:string
+    public imageUrl:string,
+    public rating:number
   ){}
 
   getNewPrice(price:number):number{

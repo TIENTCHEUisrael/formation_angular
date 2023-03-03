@@ -16,55 +16,62 @@ export class HotelListComponent implements OnInit{
 
   public title='List hotels';
 
-  public hotels:any[]=[
+  public hotels:Ihotel[]=[
     {
       hotelId:1,
       hotelName:'Buea sweet life',
       description:'Belle vue sur la plage',
       price:220.5,
-      imageUrl:'assets/img/h1.jpg'
+      imageUrl:'assets/img/h1.jpg',
+      rating:4
     },
     {
       hotelId:2,
       hotelName:'Buea sweet',
       description:'Belle vue sur la plage',
       price:210.5,
-      imageUrl:'assets/img/h2.jpeg'
+      imageUrl:'assets/img/h2.jpeg',
+      rating:2.5
     },
     {
       hotelId:3,
       hotelName:'Buea  life',
       description:'Belle vue sur la plage',
       price:200.5,
-      imageUrl:'assets/img/h3.jpeg'
+      imageUrl:'assets/img/h3.jpeg',
+      rating:5
     },
     {
       hotelId:4,
       hotelName:' sweet life',
       description:'Belle vue sur la plage',
       price:90.5,
-      imageUrl:'assets/img/h4.jpg'
+      imageUrl:'assets/img/h4.jpg',
+      rating:1.5
     },
     {
       hotelId:5,
       hotelName:'Buea swe life',
       description:'Belle vue sur la plage',
       price:90.5,
-      imageUrl:'assets/img/h5.jpg'
+      imageUrl:'assets/img/h5.jpg',
+      rating:3.5
     },
     {
       hotelId:6,
       hotelName:'Bu sweet life',
       description:'Belle vue sur la plage',
       price:330.5,
-      imageUrl:'assets/img/h6.jpeg'
+      imageUrl:'assets/img/h6.jpeg',
+      rating:1
     },
     {
       hotelId:7,
       hotelName:'Bea sweet li',
       description:'Belle vue sur la plage',
       price:450.5,
-      imageUrl:'assets/img/h1.jpg'
+      imageUrl:'assets/img/h1.jpg',
+      rating:2
     }
   ]
 
